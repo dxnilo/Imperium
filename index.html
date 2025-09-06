@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IMPERIUN - Ropa de Gym</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Trade+Winds&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="container">
+              <div class="brand">
+          <img class="logo" src="logo/WhatsApp Image 2025-09-06 at 3.54.42 PM-Photoroom.png" alt="Logo Imperiun" />
+        </div>
+      <nav class="menu">
+        <a href="#inicio" class="menu-link active">Inicio</a>
+        <a href="#catalogo" class="menu-link">Catálogo</a>
+        <a href="#contacto" class="menu-link">Contacto</a>
+        <a href="#pedidos" class="menu-link">Pedidos</a>
+        <a href="#perfil" class="menu-link">Perfil</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section id="inicio" class="hero" aria-label="Portada">
+      <div class="hero-media" role="img" aria-label="Imagen principal Imperiun"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content container">
+        <img class="hero-title-img" src="nombre/WhatsApp Image 2025-09-06 at 4.36.03 PM-Photoroom.png" alt="Imperiun" />
+        <a href="#catalogo" class="btn btn-primary">Ver colección</a>
+        <p class="hero-sub">Fuerza. Estilo. Rendimiento.</p>
+      </div>
+    </section>
+
+    <section id="catalogo" class="section container">
+      <header class="section-header">
+        <h2 class="section-title">NEW COLLECTION</h2>
+        <p class="section-sub">DROP 16:3</p>
+      </header>
+
+      <div class="filters" role="tablist" aria-label="Categorías de productos">
+        <button class="filter-button active" data-filter="todos" role="tab">Todos</button>
+        <button class="filter-button" data-filter="camisas de compresion" role="tab">Camisas de compresión</button>
+        <button class="filter-button" data-filter="camisillas" role="tab">Camisillas</button>
+        <button class="filter-button" data-filter="jogger tipo cargo" role="tab">Jogger tipo cargo</button>
+        <button class="filter-button" data-filter="joggers" role="tab">Joggers</button>
+      </div>
+
+      <div id="product-grid" class="grid" aria-live="polite"></div>
+    </section>
+
+    <section id="contacto" class="section container">
+      <header class="section-header">
+        <h2 class="section-title">Contacto</h2>
+      </header>
+      <p>¿Tienes dudas? Escríbenos por WhatsApp desde cualquier producto o al correo <a href="mailto:contacto@imperiun.fit">contacto@imperiun.fit</a>.</p>
+    </section>
+
+    <section id="pedidos" class="section container">
+      <header class="section-header">
+        <h2 class="section-title">Pedidos</h2>
+      </header>
+      <p>Revisa el estado de tus pedidos iniciando sesión en tu perfil.</p>
+    </section>
+
+    <section id="perfil" class="section container">
+      <header class="section-header">
+        <h2 class="section-title">Perfil</h2>
+      </header>
+      <p>Inicia sesión para ver y editar tu información.</p>
+    </section>
+  </main>
+
+  <div id="product-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog">
+      <button class="modal-close" aria-label="Cerrar" data-close>&times;</button>
+      <div class="modal-body">
+        <div class="modal-media">
+          <img id="modal-image" alt="Producto" />
+        </div>
+        <div class="modal-info">
+          <h3 id="modal-title" class="modal-title"></h3>
+          <p id="modal-category" class="modal-category"></p>
+          <p class="modal-price"><span id="modal-price"></span></p>
+          <div class="modal-actions">
+            <a id="modal-whatsapp" class="btn btn-whatsapp" target="_blank" rel="noopener">WhatsApp</a>
+            <button class="btn btn-secondary" data-close>Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <p>© <span id="year"></span> IMPERIUN. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html> 
