@@ -182,6 +182,7 @@
 	function updateNavbar() {
 		const currentScrollY = window.scrollY;
 		const maxScroll = 150; // Distancia total para completar la transición
+		const isMobile = window.innerWidth <= 768; // Aplicar también en tablet
 		
 		// Calcular el progreso de 0 a 1
 		const progress = Math.min(currentScrollY / maxScroll, 1);
@@ -204,8 +205,15 @@
 		// Cambiar la altura del brand gradualmente para evitar saltos
 		const brandHeight = Math.max(0, 64 - (progress * 64));
 		
-		// El menú se mantiene fijo, solo el logo se mueve
-		// No mover el menú para que siempre esté visible
+		// Calcular el desplazamiento del menú según el tamaño de pantalla
+		let menuTranslateX = 0;
+		if (window.innerWidth <= 480) {
+			// En móvil, mover hasta la esquina izquierda para balance
+			menuTranslateX = progress * -60;
+		} else if (window.innerWidth <= 768) {
+			// En tablet, mover bastante hacia la izquierda
+			menuTranslateX = progress * -45;
+		}
 		
 		// Aplicar todas las transformaciones graduales
 		brand.style.opacity = logoOpacity;
@@ -213,8 +221,8 @@
 		brand.style.height = `${brandHeight}px`;
 		brand.style.overflow = 'hidden';
 		
-		// El menú se mantiene en su posición original
-		menu.style.transform = 'translateY(0px)';
+		// Animar el menú deslizándose hacia la izquierda para crear espacio
+		menu.style.transform = `translateX(${menuTranslateX}px)`;
 		
 		topbar.style.paddingTop = `${padding}px`;
 		topbar.style.paddingBottom = `${padding}px`;
