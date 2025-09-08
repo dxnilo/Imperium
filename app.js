@@ -221,8 +221,8 @@
 		brand.style.height = `${brandHeight}px`;
 		brand.style.overflow = 'hidden';
 		
-		// Animar el menú deslizándose hacia la izquierda para crear espacio
-		menu.style.transform = `translateX(${-20 + menuTranslateX}px)`;
+		// El menú ya no necesita moverse porque no hay iconos sociales
+		menu.style.transform = `translateX(0px)`;
 		
 		topbar.style.paddingTop = `${padding}px`;
 		topbar.style.paddingBottom = `${padding}px`;
