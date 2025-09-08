@@ -208,11 +208,11 @@
 		// Calcular el desplazamiento del menú según el tamaño de pantalla
 		let menuTranslateX = 0;
 		if (window.innerWidth <= 480) {
-			// En móvil, mover hasta la esquina izquierda para balance
-			menuTranslateX = progress * -60;
+			// En móvil, mover muy poco para no cortar las opciones
+			menuTranslateX = progress * -8;
 		} else if (window.innerWidth <= 768) {
-			// En tablet, mover bastante hacia la izquierda
-			menuTranslateX = progress * -45;
+			// En tablet, mover moderadamente hacia la izquierda
+			menuTranslateX = progress * -15;
 		}
 		
 		// Aplicar todas las transformaciones graduales
