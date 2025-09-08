@@ -123,8 +123,8 @@
 		modalTitle.textContent = product.name;
 		modalCategory.textContent = categories.find(c=>c.key===product.category)?.title ?? '';
 		modalPrice.textContent = toMoney(product.price);
-		const message = encodeURIComponent(`Hola, quiero este producto: ${product.name} (${product.id}).`);
-		modalWhatsApp.href = `https://wa.me/?text=${message}`;
+		const message = encodeURIComponent(`Hola, quiero este producto: ${product.name} (${product.id}) - Precio: ${toMoney(product.price)}`);
+		modalWhatsApp.href = `https://wa.me/573007219093?text=${message}`;
 		productModal.setAttribute('aria-hidden','false');
 	}
 	function closeModal(){
