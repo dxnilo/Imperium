@@ -172,6 +172,30 @@
 		});
 	});
 
+	// Control de reproducción del video del hero
+	const heroSection = document.getElementById('inicio');
+	const heroVideo = document.querySelector('.hero-video');
+	if (heroVideo) {
+		// Intentar reproducir siempre que sea posible
+		const tryPlay = () => { const p = heroVideo.play?.(); if (p && typeof p.catch === 'function') p.catch(()=>{}); };
+		const pause = () => { try { heroVideo.pause?.(); } catch(_){} };
+		// Pausar cuando pestaña no está visible, reanudar cuando vuelve
+		document.addEventListener('visibilitychange', () => {
+			if (document.hidden) pause(); else tryPlay();
+		});
+		// Usar IntersectionObserver para pausar si el hero no está a la vista
+		const io = new IntersectionObserver((entries)=>{
+			entries.forEach(entry=>{
+				if (entry.isIntersecting && entry.intersectionRatio > 0.2) tryPlay(); else pause();
+			});
+		},{ root: null, threshold: [0, 0.2, 0.5, 1] });
+		io.observe(heroSection);
+		// Reintentos ante bloqueos de reproducción en iOS/Android
+		heroVideo.addEventListener('loadeddata', tryPlay, { once: true });
+		heroVideo.addEventListener('canplay', tryPlay);
+		window.addEventListener('focus', tryPlay);
+	}
+
 	// Navbar scroll effect
 	const topbar = document.querySelector('.topbar');
 	const brand = document.querySelector('.brand');
