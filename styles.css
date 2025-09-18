@@ -94,12 +94,12 @@
 .opinions-content{display:grid;grid-template-columns:1fr auto;gap:40px;max-width:800px;margin:0 auto;align-items:center;padding:0 20px}
 
 /* Opinion Message */
-.opinion-message{text-align:left;opacity:0}
+.opinion-message{text-align:left;opacity:0;animation:gentleFadeIn 1.5s ease-out 0.5s forwards}
 .opinion-username{color:#fff;font-weight:600;font-size:16px;margin-bottom:8px;font-family:"Trade Winds",cursive}
 .opinion-comment{margin:0;color:#ccc;font-size:15px;line-height:1.5;font-style:italic}
 
 /* Phone Animation */
-.phone-container{display:flex;justify-content:center;align-items:center;opacity:0}
+.phone-container{display:flex;justify-content:center;align-items:center;opacity:0;animation:gentleFadeIn 1.5s ease-out 1s forwards}
 .phone-card{width:180px;height:320px;background:black;border-radius:30px;border:2px solid rgb(40,40,40);padding:6px;position:relative;box-shadow:2px 5px 15px rgba(0,0,0,.486)}
 .card-int{background-image:linear-gradient(to right bottom,#ff0000,#ff0045,#ff0078,#ea00aa,#b81cd7,#8a3ad6,#5746cf,#004ac2,#003d94,#002e66,#001d3a,#020812);background-size:200% 200%;background-position:0% 0%;height:100%;border-radius:18px;transition:all .6s ease-out;overflow:hidden}
 .phone-card:hover .card-int{background-position:100% 100%}
@@ -118,13 +118,8 @@
 .phone-card:hover .hidden{opacity:1}
 .phone-card:hover .hello{transform:translateY(-15px)}
 
-/* Entrance Animations */
-@keyframes fadeInLeft{0%{opacity:0;transform:translateX(-20px)}100%{opacity:1;transform:translateX(0)}}
-@keyframes fadeInRight{0%{opacity:0;transform:translateX(20px)}100%{opacity:1;transform:translateX(0)}}
-
-/* Animation classes for intersection observer */
-.opinion-message.animate{animation:fadeInLeft 0.6s ease-out forwards}
-.phone-container.animate{animation:fadeInRight 0.6s ease-out 0.2s forwards}
+/* Professional Entrance Animation */
+@keyframes gentleFadeIn{0%{opacity:0;transform:translateY(15px) scale(0.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
 
 /* Final CTA Section */
 .final-cta{background:linear-gradient(135deg,#000 0%,#080808 25%,#0a0a0a 50%,#080808 75%,#000 100%);text-align:center;border-top:1px solid var(--border);border-bottom:2px solid #1a1a1a;position:relative}
