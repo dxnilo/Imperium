@@ -120,11 +120,11 @@
 
 /* Animated Text Bar */
 .animated-text-bar{background:linear-gradient(90deg,#2a2a2a 0%,#1a1a1a 50%,#2a2a2a 100%);padding:12px 0;overflow:hidden;position:relative;border-top:1px solid #333;border-bottom:1px solid #333}
-.text-slider{display:flex;align-items:center;white-space:nowrap;animation:slideText 20s linear infinite}
+.text-slider{display:flex;align-items:center;white-space:nowrap;animation:slideText 15s linear infinite;width:200%}
 .text-item{color:#fff;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-family:"Trade Winds",cursive;margin:0 15px}
 .text-separator{color:#fff;font-size:16px;font-weight:bold;margin:0 15px}
 
-@keyframes slideText{0%{transform:translateX(100%)}100%{transform:translateX(-100%)}}
+@keyframes slideText{0%{transform:translateX(0%)}100%{transform:translateX(-50%)}}
 
 /* Final CTA Section */
 .final-cta{background:linear-gradient(135deg,#000 0%,#080808 25%,#0a0a0a 50%,#080808 75%,#000 100%);text-align:center;border-top:1px solid var(--border);border-bottom:2px solid #1a1a1a;position:relative}
