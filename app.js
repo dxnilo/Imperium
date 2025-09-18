@@ -267,6 +267,32 @@
 
 
 
+	// Control del video del teléfono en opiniones
+	const phoneVideo = document.querySelector('.phone-video');
+	const opinionsSection = document.getElementById('opiniones');
+	
+	if (phoneVideo && opinionsSection) {
+		const tryPlayPhone = () => { const p = phoneVideo.play?.(); if (p && typeof p.catch === 'function') p.catch(()=>{}); };
+		const pausePhone = () => { try { phoneVideo.pause?.(); } catch(_){} };
+		
+		// Pausar cuando pestaña no está visible, reanudar cuando vuelve
+		document.addEventListener('visibilitychange', () => {
+			if (document.hidden) pausePhone(); else tryPlayPhone();
+		});
+		
+		// Usar IntersectionObserver para pausar si la sección no está a la vista
+		const phoneObserver = new IntersectionObserver((entries)=>{
+			entries.forEach(entry=>{
+				if (entry.isIntersecting && entry.intersectionRatio > 0.1) tryPlayPhone(); else pausePhone();
+			});
+		},{ root: null, threshold: [0, 0.1, 0.5] });
+		phoneObserver.observe(opinionsSection);
+		
+		// Intentar reproducir cuando el video esté listo
+		phoneVideo.addEventListener('loadeddata', tryPlayPhone, { once: true });
+		phoneVideo.addEventListener('canplay', tryPlayPhone);
+	}
+
 	// Inicial
 	renderProducts('todos');
 })(); 
