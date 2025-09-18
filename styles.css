@@ -74,15 +74,26 @@
 .btn-whatsapp:hover{transform:translateY(-3px);box-shadow:0 0 30px rgba(37,211,102,.6),0 12px 24px rgba(0,0,0,.4);background:linear-gradient(135deg,#128c7e 0%,#25d366 100%)}
 .btn-secondary{background:linear-gradient(145deg,transparent 0%,rgba(255,255,255,.05) 50%,transparent 100%);color:#ccc;border:2px solid #444;padding:12px 24px;font-size:14px;font-weight:600}
 .btn-secondary:hover{background:linear-gradient(145deg,#333 0%,#555 100%);color:#fff;border-color:#fff;transform:translateY(-2px)}
+/* Keyframes para animación de bestsellers */
+@keyframes bestsellerPulse1{0%{transform:scale(1.08)}25%{transform:scale(1)}50%{transform:scale(1)}75%{transform:scale(1)}100%{transform:scale(1.08)}}
+@keyframes bestsellerPulse2{0%{transform:scale(1)}25%{transform:scale(1.08)}50%{transform:scale(1)}75%{transform:scale(1)}100%{transform:scale(1)}}
+@keyframes bestsellerPulse3{0%{transform:scale(1)}25%{transform:scale(1)}50%{transform:scale(1.08)}75%{transform:scale(1)}100%{transform:scale(1)}}
+
 /* Bestsellers Section */
 .bestsellers{background:linear-gradient(135deg,#000 0%,#030303 30%,#020202 70%,#000 100%);border-top:1px solid var(--border);border-bottom:1px solid #1a1a1a;padding:60px 0;position:relative}
 .bestsellers::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 70% 100% at 50% 0%,rgba(255,255,255,.015) 0%,transparent 70%);pointer-events:none}
 .bestsellers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto;padding:0}
-.bestseller-card{background:linear-gradient(145deg,#080808 0%,#0a0a0a 40%,#050505 100%);border:2px solid #2a2a2a;border-radius:8px;overflow:hidden;transition:all .3s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;box-shadow:0 4px 16px rgba(0,0,0,.8),inset 0 1px 0 rgba(255,255,255,.03)}
+.bestseller-card{background:linear-gradient(145deg,#080808 0%,#0a0a0a 40%,#050505 100%);border:2px solid #2a2a2a;border-radius:8px;overflow:hidden;transition:all .3s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;box-shadow:0 4px 15px rgba(0,0,0,.6)}
 .bestseller-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,.8),0 0 0 1px #fff;border-color:#fff}
 .bestseller-media{aspect-ratio:1/1;background:#000;display:grid;place-items:center;overflow:hidden}
 .bestseller-media img{width:100%;height:100%;object-fit:cover;transition:all .3s ease;filter:contrast(1.1) saturate(1.2)}
-.bestseller-card:hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.2) saturate(1.4)}
+
+/* Animaciones específicas para cada imagen */
+.bestseller-card:nth-child(1) .bestseller-media img{animation:bestsellerPulse1 4s ease-in-out infinite}
+.bestseller-card:nth-child(2) .bestseller-media img{animation:bestsellerPulse2 4s ease-in-out infinite}
+.bestseller-card:nth-child(3) .bestseller-media img{animation:bestsellerPulse3 4s ease-in-out infinite}
+
+.bestseller-card:hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.2) saturate(1.4);animation-play-state:paused}
 .bestseller-info{padding:16px;text-align:center}
 .bestseller-title{margin:0 0 6px;font-size:14px;font-weight:400;color:#fff;font-family:"Trade Winds",cursive}
 .bestseller-price{margin:0;font-size:16px;font-weight:600;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.8)}
