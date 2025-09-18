@@ -265,26 +265,27 @@
 		}
 	});
 
-	// Animaciones de entrada para la sección de opiniones
+	// Animaciones de entrada para la sección de opiniones (solo una vez)
 	const opinionMessage = document.querySelector('.opinion-message');
 	const phoneContainer = document.querySelector('.phone-container');
 	
 	if (opinionMessage && phoneContainer) {
+		let hasAnimated = false;
+		
 		const opinionsObserver = new IntersectionObserver((entries) => {
 			entries.forEach(entry => {
-				if (entry.isIntersecting) {
-					// Resetear animaciones
-					opinionMessage.classList.remove('animate');
-					phoneContainer.classList.remove('animate');
+				if (entry.isIntersecting && !hasAnimated) {
+					hasAnimated = true;
 					
-					// Activar animaciones después de un pequeño delay
-					setTimeout(() => {
-						opinionMessage.classList.add('animate');
-						phoneContainer.classList.add('animate');
-					}, 100);
+					// Activar animaciones solo una vez
+					opinionMessage.classList.add('animate');
+					phoneContainer.classList.add('animate');
+					
+					// Desconectar el observer para evitar bucles
+					opinionsObserver.disconnect();
 				}
 			});
-		}, { threshold: 0.3 });
+		}, { threshold: 0.2, rootMargin: '50px' });
 		
 		opinionsObserver.observe(document.getElementById('opiniones'));
 	}
