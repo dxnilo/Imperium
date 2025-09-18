@@ -119,7 +119,7 @@
 @keyframes gentleFadeIn{0%{opacity:0;transform:translateY(15px) scale(0.98)}100%{opacity:1;transform:translateY(0) scale(1)}}
 
 /* Animated Text Bar */
-.animated-text-bar{background:linear-gradient(90deg,#25d366 0%,#128c7e 50%,#25d366 100%);padding:12px 0;overflow:hidden;position:relative;border-top:1px solid #128c7e;border-bottom:1px solid #128c7e}
+.animated-text-bar{background:linear-gradient(90deg,#2a2a2a 0%,#1a1a1a 50%,#2a2a2a 100%);padding:12px 0;overflow:hidden;position:relative;border-top:1px solid #333;border-bottom:1px solid #333}
 .text-slider{display:flex;align-items:center;white-space:nowrap;animation:slideText 20s linear infinite}
 .text-item{color:#fff;font-size:16px;font-weight:600;text-transform:uppercase;letter-spacing:.1em;font-family:"Trade Winds",cursive;margin:0 15px}
 .text-separator{color:#fff;font-size:16px;font-weight:bold;margin:0 15px}
