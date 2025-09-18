@@ -265,6 +265,30 @@
 		}
 	});
 
+	// Animaciones de entrada para la sección de opiniones
+	const opinionMessage = document.querySelector('.opinion-message');
+	const phoneContainer = document.querySelector('.phone-container');
+	
+	if (opinionMessage && phoneContainer) {
+		const opinionsObserver = new IntersectionObserver((entries) => {
+			entries.forEach(entry => {
+				if (entry.isIntersecting) {
+					// Resetear animaciones
+					opinionMessage.classList.remove('animate');
+					phoneContainer.classList.remove('animate');
+					
+					// Activar animaciones después de un pequeño delay
+					setTimeout(() => {
+						opinionMessage.classList.add('animate');
+						phoneContainer.classList.add('animate');
+					}, 100);
+				}
+			});
+		}, { threshold: 0.3 });
+		
+		opinionsObserver.observe(document.getElementById('opiniones'));
+	}
+
 	// Inicial
 	renderProducts('todos');
 })(); 
