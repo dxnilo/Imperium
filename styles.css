@@ -94,20 +94,20 @@
 .bestseller-media{aspect-ratio:1/1;background:#000;display:grid;place-items:center;overflow:hidden}
 .bestseller-media img{width:100%;height:100%;object-fit:cover;transition:all .3s ease;filter:contrast(1.05) saturate(1.0)}
 
-/* Configuración normal para PC grande */
-.bestseller-card:nth-child(1) .bestseller-media img{animation:bestsellerPulse1 4s ease-in-out infinite;object-fit:cover;object-position:center center}
-.bestseller-card:nth-child(2) .bestseller-media img{animation:bestsellerPulse2 4s ease-in-out infinite;object-fit:cover;object-position:center center;transform:scale(1.1)}
-.bestseller-card:nth-child(3) .bestseller-media img{animation:bestsellerPulse3 4s ease-in-out infinite;object-fit:cover;object-position:center center}
+/* Configuración sin animaciones */
+.bestseller-card:nth-child(1) .bestseller-media img{object-fit:cover;object-position:center center}
+.bestseller-card:nth-child(2) .bestseller-media img{object-fit:cover;object-position:center center;transform:scale(1.1)}
+.bestseller-card:nth-child(3) .bestseller-media img{object-fit:cover;object-position:center center}
 
-/* Techo que aparece solo en móvil y PC minimizado */
+/* Techo ajustado para igualar altura de camisas de compresión */
 .bestseller-media::before{
   content:'';
   position:absolute;
   top:0;
   left:0;
   right:0;
-  height:15%;
-  background:linear-gradient(180deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 50%, transparent 100%);
+  height:25%;
+  background:linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
   z-index:1;
   display:none;
 }
