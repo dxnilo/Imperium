@@ -91,14 +91,15 @@
 .bestsellers-grid{display:flex;align-items:center;justify-content:center;gap:30px;margin:40px 0;flex-wrap:wrap}
 
 .card_box{
-  width:200px;
-  height:250px;
+  width:160px;
+  height:200px;
   border-radius:20px;
   background:linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
   position:relative;
   box-shadow:0 25px 50px rgba(0,0,0,0.55);
   cursor:pointer;
   transition:all .3s;
+  overflow:hidden;
 }
 
 .card_box:hover{
@@ -122,7 +123,7 @@
   position:absolute;
   width:150%;
   height:40px;
-  background-image:linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+  background:#1a1a1a;
   transform:rotate(-45deg) translateY(-20px);
   display:flex;
   align-items:center;
@@ -148,10 +149,10 @@
 
 .card-image{
   position:absolute;
-  top:30px;
-  left:15px;
-  right:15px;
-  bottom:60px;
+  top:0;
+  left:0;
+  right:0;
+  bottom:50px;
   display:flex;
   align-items:center;
   justify-content:center;
@@ -161,7 +162,7 @@
   width:100%;
   height:100%;
   object-fit:cover;
-  border-radius:10px;
+  border-radius:20px 20px 0 0;
   filter:contrast(1.05) saturate(1.0);
 }
 
@@ -196,59 +197,56 @@
 @media (max-width:768px){
   .bestsellers-grid{
     display:flex;
-    justify-content:space-around;
-    gap:15px;
+    justify-content:center;
+    gap:10px;
     flex-wrap:nowrap;
-    overflow-x:auto;
     padding:0 10px;
   }
   
   .card_box{
-    width:180px;
-    height:220px;
+    width:140px;
+    height:180px;
     flex-shrink:0;
   }
   
   .card-image{
-    top:25px;
-    left:10px;
-    right:10px;
-    bottom:50px;
+    bottom:40px;
   }
   
   .card-info{
-    padding:10px;
+    padding:8px;
   }
   
   .card-title{
-    font-size:12px;
-    margin:0 0 5px;
+    font-size:10px;
+    margin:0 0 3px;
   }
   
   .card-price{
-    font-size:14px;
+    font-size:12px;
   }
 }
 
 @media (max-width:480px){
   .card_box{
-    width:160px;
-    height:200px;
+    width:120px;
+    height:160px;
   }
   
   .card-image{
-    top:20px;
-    left:8px;
-    right:8px;
-    bottom:45px;
+    bottom:35px;
+  }
+  
+  .card-info{
+    padding:6px;
   }
   
   .card-title{
-    font-size:11px;
+    font-size:9px;
   }
   
   .card-price{
-    font-size:13px;
+    font-size:11px;
   }
 }
 
