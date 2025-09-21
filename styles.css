@@ -112,9 +112,29 @@
   display:none;
 }
 
+/* Etiqueta TOP SELL para bestsellers */
+.bestseller-media{position:relative}
+.bestseller-media::after{
+  content:'TOP SELL';
+  position:absolute;
+  top:10px;
+  left:-5px;
+  background:#444444;
+  color:#fff;
+  padding:5px 15px;
+  font-size:10px;
+  font-weight:bold;
+  text-transform:uppercase;
+  letter-spacing:0.5px;
+  transform:rotate(-45deg);
+  transform-origin:left center;
+  box-shadow:0 2px 4px rgba(0,0,0,0.3);
+  z-index:2;
+  border-radius:0 3px 3px 0;
+}
+
 /* Activar techo en pantallas pequeñas */
 @media (max-width:768px){
-  .bestseller-media{position:relative}
   .bestseller-media::before{display:block}
 }
 
