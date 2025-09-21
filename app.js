@@ -51,25 +51,87 @@
 	}
 
 	const catalog = [
-		// Camisas de compresión
-		{ id: 'comp-1', name: 'Compresión Elite Black', price: 149000, category: 'camisas de compresion', img: 'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (4).jpeg' },
-		{ id: 'comp-2', name: 'Compresión Pro White', price: 145000, category: 'camisas de compresion', img: 'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (5).jpeg' },
+		// Camisas de compresión - PRECIO ACTUALIZADO A $55.000
+		{ 
+			id: 'comp-1', 
+			name: 'Camisas de Compresión', 
+			price: 55000, 
+			category: 'camisas de compresion', 
+			images: [
+				'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (4).jpeg',
+				'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (5).jpeg'
+			]
+		},
 		
-		// Camisillas
-		{ id: 'cam-1', name: 'Tank Top Premium', price: 89000, category: 'camisillas', img: 'camisillas/WhatsApp Image 2025-09-06 at 2.03.39 PM (6).jpeg' },
-		{ id: 'cam-2', name: 'Dry-Fit Essential', price: 79000, category: 'camisillas', img: 'camisillas/WhatsApp Image 2025-09-06 at 2.03.40 PM.jpeg' },
+		// Camisillas - PRECIO ACTUALIZADO A $50.000
+		{ 
+			id: 'cam-1', 
+			name: 'Camisillas', 
+			price: 50000, 
+			category: 'camisillas', 
+			images: [
+				'camisillas/WhatsApp Image 2025-09-06 at 2.03.39 PM (6).jpeg',
+				'camisillas/WhatsApp Image 2025-09-06 at 2.03.40 PM.jpeg'
+			]
+		},
 		
-		// Jogger tipo cargo
-		{ id: 'cargo-1', name: 'Cargo Tactical Olive', price: 189000, category: 'jogger tipo cargo', img: 'jogger tipo cargo/WhatsApp Image 2025-09-06 at 2.03.39 PM (2).jpeg' },
-		{ id: 'cargo-2', name: 'Cargo Military Black', price: 185000, category: 'jogger tipo cargo', img: 'jogger tipo cargo/WhatsApp Image 2025-09-06 at 2.03.39 PM (3).jpeg' },
+		// Jogger tipo cargo - PRECIO ACTUALIZADO A $68.000
+		{ 
+			id: 'cargo-1', 
+			name: 'Jogger Tipo Cargo', 
+			price: 68000, 
+			category: 'jogger tipo cargo', 
+			images: [
+				'jogger tipo cargo/WhatsApp Image 2025-09-06 at 2.03.39 PM (2).jpeg',
+				'jogger tipo cargo/WhatsApp Image 2025-09-06 at 2.03.39 PM (3).jpeg'
+			]
+		},
 		
-		// Joggers
-		{ id: 'jog-1', name: 'Jogger Classic Fit', price: 129000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.38 PM.jpeg' },
-		{ id: 'jog-2', name: 'Jogger Performance', price: 135000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.38 PM (1).jpeg' },
-		{ id: 'jog-3', name: 'Jogger Athletic Gray', price: 132000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.38 PM (2).jpeg' },
-		{ id: 'jog-4', name: 'Jogger Urban Style', price: 138000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.38 PM (3).jpeg' },
-		{ id: 'jog-5', name: 'Jogger Premium Black', price: 142000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.39 PM.jpeg' },
-		{ id: 'jog-6', name: 'Jogger Elite Series', price: 145000, category: 'joggers', img: 'joggers/WhatsApp Image 2025-09-06 at 2.03.39 PM (1).jpeg' },
+		// Joggers de $70.000 - PRODUCTOS INDIVIDUALES
+		{ 
+			id: 'jog-70-1', 
+			name: 'Jogger Imperium White', 
+			price: 70000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 70.000/jogger imperium white/WhatsApp Image 2025-09-06 at 2.03.39 PM.jpeg']
+		},
+		{ 
+			id: 'jog-70-2', 
+			name: 'Jogger Imperium Black', 
+			price: 70000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 70.000/jogger imperium black/WhatsApp Image 2025-09-06 at 2.03.39 PM (1).jpeg']
+		},
+		
+		// Joggers de $80.000 - PRODUCTOS INDIVIDUALES
+		{ 
+			id: 'jog-80-1', 
+			name: 'Jogger Imperium Electric Black', 
+			price: 80000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 80.000/jogger imperium electric black/WhatsApp Image 2025-09-06 at 2.03.38 PM.jpeg']
+		},
+		{ 
+			id: 'jog-80-2', 
+			name: 'Jogger Imperium Electric White', 
+			price: 80000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 80.000/jogger imperium electric white/WhatsApp Image 2025-09-06 at 2.03.38 PM (1).jpeg']
+		},
+		{ 
+			id: 'jog-80-3', 
+			name: 'Jogger Imperium Hardstyle Black', 
+			price: 80000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 80.000/jogger imperium hardstyle black/WhatsApp Image 2025-09-06 at 2.03.38 PM (2).jpeg']
+		},
+		{ 
+			id: 'jog-80-4', 
+			name: 'Jogger Imperium Hardstyle White', 
+			price: 80000, 
+			category: 'joggers', 
+			images: ['joggers/jogers a 80.000/jogger imperium hardstyle white/WhatsApp Image 2025-09-06 at 2.03.38 PM (3).jpeg']
+		},
 	];
 
 	function renderProducts(filter){
@@ -77,7 +139,7 @@
 		productGrid.innerHTML = items.map((p, index) => `
 			<article class="card" data-id="${p.id}" data-category="${p.category}" style="animation-delay: ${index * 100}ms">
 				<div class="card-media">
-					<img src="${p.img}" alt="${p.name}" loading="lazy" />
+					<img src="${p.images ? p.images[0] : p.img}" alt="${p.name}" loading="lazy" />
 				</div>
 				<div class="card-body">
 					<h3 class="card-title">${p.name}</h3>
@@ -118,22 +180,78 @@
 		openModal(product);
 	});
 
+	let currentImageIndex = 0;
+	let currentProduct = null;
+	
 	function openModal(product){
-		modalImage.src = product.img;
+		currentProduct = product;
+		currentImageIndex = 0;
+		
+		const images = product.images || [product.img];
+		modalImage.src = images[0];
 		modalTitle.textContent = product.name;
 		modalCategory.textContent = categories.find(c=>c.key===product.category)?.title ?? '';
 		modalPrice.textContent = toMoney(product.price);
 		const message = encodeURIComponent(`Hola, quiero este producto: ${product.name} (${product.id}) - Precio: ${toMoney(product.price)}`);
-		modalWhatsApp.href = `https://wa.me/573007219093?text=${message}`;
+		modalWhatsApp.href = `https://wa.me/573017068585?text=${message}`;
+		
+		// Mostrar controles de galería solo si hay múltiples imágenes
+		const galleryControls = document.getElementById('modal-gallery-controls');
+		const imageCounter = document.getElementById('modal-image-counter');
+		
+		if (images.length > 1) {
+			galleryControls.style.display = 'flex';
+			imageCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+		} else {
+			galleryControls.style.display = 'none';
+		}
+		
 		productModal.setAttribute('aria-hidden','false');
 	}
 	function closeModal(){
 		productModal.setAttribute('aria-hidden','true');
+		currentProduct = null;
+		currentImageIndex = 0;
 	}
+	
+	function showImage(index) {
+		if (!currentProduct) return;
+		
+		const images = currentProduct.images || [currentProduct.img];
+		if (index >= 0 && index < images.length) {
+			currentImageIndex = index;
+			modalImage.src = images[index];
+			const imageCounter = document.getElementById('modal-image-counter');
+			imageCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+		}
+	}
+	
+	function nextImage() {
+		if (!currentProduct) return;
+		const images = currentProduct.images || [currentProduct.img];
+		const nextIndex = (currentImageIndex + 1) % images.length;
+		showImage(nextIndex);
+	}
+	
+	function prevImage() {
+		if (!currentProduct) return;
+		const images = currentProduct.images || [currentProduct.img];
+		const prevIndex = (currentImageIndex - 1 + images.length) % images.length;
+		showImage(prevIndex);
+	}
+	
+	// Event listeners para los controles de galería
+	document.getElementById('modal-next').addEventListener('click', nextImage);
+	document.getElementById('modal-prev').addEventListener('click', prevImage);
+	
 	productModal.addEventListener('click', (ev)=>{
 		if(ev.target.hasAttribute('data-close')) closeModal();
 	});
-	window.addEventListener('keydown', (ev)=>{ if(ev.key==='Escape') closeModal(); });
+	window.addEventListener('keydown', (ev)=>{ 
+		if(ev.key==='Escape') closeModal();
+		if(ev.key==='ArrowRight') nextImage();
+		if(ev.key==='ArrowLeft') prevImage();
+	});
 
 	// Navegación suave
 	document.querySelectorAll('a[href^="#"]').forEach(link => {
