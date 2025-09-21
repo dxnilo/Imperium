@@ -85,67 +85,107 @@
 @keyframes bestsellerPulse2{0%{transform:scale(1)}25%{transform:scale(1.08)}50%{transform:scale(1)}75%{transform:scale(1)}100%{transform:scale(1)}}
 @keyframes bestsellerPulse3{0%{transform:scale(1)}25%{transform:scale(1)}50%{transform:scale(1.08)}75%{transform:scale(1)}100%{transform:scale(1)}}
 
-/* Bestsellers Section */
+/* Nuevas tarjetas modernas para bestsellers */
 .bestsellers{background:linear-gradient(135deg,#000 0%,#030303 30%,#020202 70%,#000 100%);border-top:1px solid var(--border);border-bottom:1px solid #1a1a1a;padding:60px 0;position:relative}
 .bestsellers::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;background:radial-gradient(ellipse 70% 100% at 50% 0%,rgba(255,255,255,.015) 0%,transparent 70%);pointer-events:none}
-.bestsellers-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:900px;margin:0 auto;padding:0}
-.bestseller-card{background:linear-gradient(145deg,#080808 0%,#0a0a0a 40%,#050505 100%);border:2px solid #2a2a2a;border-radius:8px;overflow:hidden;transition:all .3s cubic-bezier(0.25,0.46,0.45,0.94);position:relative;box-shadow:0 4px 15px rgba(0,0,0,.6)}
-.bestseller-card:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 12px 30px rgba(0,0,0,.8),0 0 0 1px #fff;border-color:#fff}
-.bestseller-media{aspect-ratio:1/1;background:#000;display:grid;place-items:center;overflow:hidden}
-.bestseller-media img{width:100%;height:100%;object-fit:cover;transition:all .3s ease;filter:contrast(1.05) saturate(1.0)}
+.bestsellers-grid{display:flex;align-items:center;justify-content:center;gap:30px;margin:40px 0;flex-wrap:wrap}
 
-/* Configuración sin animaciones */
-.bestseller-card:nth-child(1) .bestseller-media img{object-fit:cover;object-position:center center}
-.bestseller-card:nth-child(2) .bestseller-media img{object-fit:cover;object-position:center center;transform:scale(1.1)}
-.bestseller-card:nth-child(3) .bestseller-media img{object-fit:cover;object-position:center center}
-
-/* Techo ajustado para igualar altura de camisas de compresión */
-.bestseller-media::before{
-  content:'';
-  position:absolute;
-  top:0;
-  left:0;
-  right:0;
-  height:25%;
-  background:linear-gradient(180deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 60%, transparent 100%);
-  z-index:1;
-  display:none;
+.card_box{
+  width:200px;
+  height:280px;
+  border-radius:20px;
+  background:linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position:relative;
+  box-shadow:0 25px 50px rgba(0,0,0,0.55);
+  cursor:pointer;
+  transition:all .3s;
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
 }
 
-/* Etiqueta TOP SELL para bestsellers */
-.bestseller-media{position:relative}
-.bestseller-media::after{
+.card_box:hover{
+  transform:scale(0.9);
+}
+
+.card_box span{
+  position:absolute;
+  overflow:hidden;
+  width:150px;
+  height:150px;
+  top:-10px;
+  left:-10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.card_box span::before{
   content:'TOP SELL';
   position:absolute;
-  top:10px;
-  left:-5px;
-  background:#444444;
+  width:150%;
+  height:40px;
+  background-image:linear-gradient(45deg, #ff6547 0%, #ffb144 51%, #ff7053 100%);
+  transform:rotate(-45deg) translateY(-20px);
+  display:flex;
+  align-items:center;
+  justify-content:center;
   color:#fff;
-  padding:5px 15px;
-  font-size:10px;
-  font-weight:bold;
+  font-weight:600;
+  letter-spacing:0.1em;
   text-transform:uppercase;
-  letter-spacing:0.5px;
-  transform:rotate(-45deg);
-  transform-origin:left center;
-  box-shadow:0 2px 4px rgba(0,0,0,0.3);
-  z-index:2;
-  border-radius:0 3px 3px 0;
+  box-shadow:0 5px 10px rgba(0,0,0,0.23);
 }
 
-/* Activar techo en pantallas pequeñas */
-@media (max-width:768px){
-  .bestseller-media::before{display:block}
+.card_box span::after{
+  content:'';
+  position:absolute;
+  width:10px;
+  bottom:0;
+  left:0;
+  height:10px;
+  z-index:-1;
+  box-shadow:140px -140px #cc3f47;
+  background-image:linear-gradient(45deg, #FF512F 0%, #F09819 51%, #FF512F 100%);
 }
 
-.bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
-.bestseller-card:nth-child(2):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
-.bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+.card-image{
+  flex:1;
+  padding:20px 15px 10px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
 
+.card-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  border-radius:10px;
+  filter:contrast(1.05) saturate(1.0);
+}
 
-.bestseller-info{padding:16px;text-align:center}
-.bestseller-title{margin:0 0 6px;font-size:14px;font-weight:400;color:#fff;font-family:"Trade Winds",cursive}
-.bestseller-price{margin:0;font-size:16px;font-weight:600;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.8)}
+.card-info{
+  padding:15px;
+  text-align:center;
+  background:rgba(0,0,0,0.3);
+}
+
+.card-title{
+  margin:0 0 8px;
+  font-size:14px;
+  font-weight:400;
+  color:#fff;
+  font-family:"Trade Winds",cursive;
+}
+
+.card-price{
+  margin:0;
+  font-size:16px;
+  font-weight:600;
+  color:#fff;
+  text-shadow:0 2px 4px rgba(0,0,0,.8);
+}
 
 /* Bestsellers CTA */
 .bestsellers-cta{text-align:center;margin-top:50px;padding-top:30px;border-top:1px solid #2a2a2a}
