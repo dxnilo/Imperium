@@ -94,13 +94,13 @@
 .bestseller-media{aspect-ratio:1/1;background:#000;display:grid;place-items:center;overflow:hidden}
 .bestseller-media img{width:100%;height:100%;object-fit:cover;transition:all .3s ease;filter:contrast(1.05) saturate(1.0)}
 
-/* Solución simple que funcionaba antes */
+/* Solución uniforme para todas las imágenes - elimina espacio negro */
 .bestseller-card:nth-child(1) .bestseller-media img{animation:bestsellerPulse1 4s ease-in-out infinite;object-position:center top;transform:scale(1.2)}
-.bestseller-card:nth-child(2) .bestseller-media img{animation:bestsellerPulse2 4s ease-in-out infinite;object-position:center center;transform:scale(1.1)}
+.bestseller-card:nth-child(2) .bestseller-media img{animation:bestsellerPulse2 4s ease-in-out infinite;object-position:center top;transform:scale(1.2)}
 .bestseller-card:nth-child(3) .bestseller-media img{animation:bestsellerPulse3 4s ease-in-out infinite;object-position:center top;transform:scale(1.2)}
 
 .bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.25);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
-.bestseller-card:nth-child(2):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+.bestseller-card:nth-child(2):hover .bestseller-media img{transform:scale(1.25);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 .bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.25);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 
 
