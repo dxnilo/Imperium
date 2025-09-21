@@ -104,6 +104,21 @@
 .bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 .bestseller-card:nth-child(2):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 .bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+
+/* Ajustes específicos para móviles - eliminación de espacio negro */
+@media (max-width:768px){
+  .bestseller-card:nth-child(1) .bestseller-media{height:70%}
+  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center 10%;transform:scale(1.3)}
+  .bestseller-card:nth-child(3) .bestseller-media{height:70%}
+  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center 10%;transform:scale(1.3)}
+}
+
+@media (max-width:480px){
+  .bestseller-card:nth-child(1) .bestseller-media{height:65%}
+  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
+  .bestseller-card:nth-child(3) .bestseller-media{height:65%}
+  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
+}
 .bestseller-info{padding:16px;text-align:center}
 .bestseller-title{margin:0 0 6px;font-size:14px;font-weight:400;color:#fff;font-family:"Trade Winds",cursive}
 .bestseller-price{margin:0;font-size:16px;font-weight:600;color:#fff;text-shadow:0 2px 4px rgba(0,0,0,.8)}
