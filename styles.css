@@ -101,24 +101,24 @@
 
 /* Solo para teléfonos reales - no afecta PC redimensionado */
 @media (max-width:480px) and (hover: none){
-  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
-  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
+  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center center;transform:scale(1.1)}
+  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center center;transform:scale(1.1)}
 }
 
 /* Fallback para móviles sin touch detection */
 @media (max-width:480px){
-  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
-  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center 5%;transform:scale(1.4)}
+  .bestseller-card:nth-child(1) .bestseller-media img{object-position:center center;transform:scale(1.1)}
+  .bestseller-card:nth-child(3) .bestseller-media img{object-position:center center;transform:scale(1.1)}
 }
 
-.bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+.bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 .bestseller-card:nth-child(2):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
-.bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+.bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 
 /* Hovers específicos solo para móviles reales */
 @media (max-width:480px){
-  .bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.45);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
-  .bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.45);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+  .bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
+  .bestseller-card:nth-child(3):hover .bestseller-media img{transform:scale(1.15);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
 }
 
 
