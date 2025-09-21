@@ -71,27 +71,6 @@
 .gallery-prev{margin-left:10px}
 .gallery-next{margin-right:10px}
 .image-counter{position:absolute;bottom:10px;left:50%;transform:translateX(-50%);background:rgba(0,0,0,.7);color:#fff;padding:4px 12px;border-radius:20px;font-size:12px;pointer-events:auto}
-
-/* Botón de expandir imagen */
-.expand-btn{position:absolute;top:10px;right:10px;background:rgba(0,0,0,.7);color:#fff;border:0;width:36px;height:36px;border-radius:6px;font-size:16px;cursor:pointer;transition:all .3s ease;z-index:10;display:flex;align-items:center;justify-content:center}
-.expand-btn:hover{background:rgba(0,0,0,.9);transform:scale(1.1)}
-
-/* Modal Fullscreen */
-.fullscreen-modal{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all .3s ease}
-.fullscreen-modal[aria-hidden="false"]{opacity:1;visibility:visible}
-.fullscreen-backdrop{position:absolute;inset:0;cursor:pointer}
-.fullscreen-container{position:relative;max-width:95vw;max-height:95vh;display:flex;align-items:center;justify-content:center}
-.fullscreen-close{position:absolute;top:-50px;right:-10px;background:rgba(255,255,255,.9);color:#000;border:0;width:40px;height:40px;border-radius:50%;font-size:24px;cursor:pointer;transition:all .3s ease;z-index:10;display:flex;align-items:center;justify-content:center}
-.fullscreen-close:hover{background:#fff;transform:scale(1.1)}
-.fullscreen-image{max-width:100%;max-height:100%;object-fit:contain;border-radius:8px;box-shadow:0 20px 60px rgba(0,0,0,.5)}
-
-/* Controles de galería fullscreen */
-.fullscreen-gallery-controls{position:absolute;inset:0;display:flex;align-items:center;justify-content:space-between;pointer-events:none}
-.fullscreen-gallery-btn{position:relative;background:rgba(255,255,255,.9);color:#000;border:0;width:50px;height:50px;border-radius:50%;font-size:24px;cursor:pointer;transition:all .3s ease;pointer-events:auto;display:flex;align-items:center;justify-content:center;z-index:10}
-.fullscreen-gallery-btn:hover{background:#fff;transform:scale(1.1)}
-.fullscreen-prev{margin-left:20px}
-.fullscreen-next{margin-right:20px}
-.fullscreen-counter{position:absolute;bottom:-60px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.9);color:#000;padding:8px 16px;border-radius:25px;font-size:14px;pointer-events:auto;font-weight:500}
 .modal-info{padding:20px;background:linear-gradient(180deg,transparent 0%,rgba(0,0,0,.3) 100%);display:flex;flex-direction:column;justify-content:center}
 .modal-title{margin:0 0 8px;font-size:24px;font-weight:700;color:#fff;font-family:"Trade Winds",cursive;text-shadow:0 2px 4px rgba(0,0,0,.8)}
 .modal-category{margin:0 0 16px;color:#999;font-weight:500;text-transform:uppercase;letter-spacing:.15em;font-size:12px;padding:4px 12px;background:rgba(255,255,255,.05);border-radius:20px;display:inline-block}

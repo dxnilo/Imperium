@@ -182,8 +182,6 @@
 
 	let currentImageIndex = 0;
 let currentProduct = null;
-let fullscreenImageIndex = 0;
-let fullscreenProduct = null;
 	
 	function openModal(product){
 		currentProduct = product;
@@ -409,98 +407,11 @@ let fullscreenProduct = null;
 		phoneVideo.addEventListener('canplay', tryPlayPhone);
 	}
 
-	// Fullscreen functionality
-	function openFullscreen() {
-		if (!currentProduct) return;
-		
-		fullscreenProduct = currentProduct;
-		fullscreenImageIndex = currentImageIndex;
-		
-		const fullscreenModal = document.getElementById('fullscreen-modal');
-		const fullscreenImage = document.getElementById('fullscreen-image');
-		const fullscreenControls = document.getElementById('fullscreen-gallery-controls');
-		const fullscreenCounter = document.getElementById('fullscreen-counter');
-		
-		const images = fullscreenProduct.images || [fullscreenProduct.img];
-		fullscreenImage.src = images[fullscreenImageIndex];
-		
-		if (images.length > 1) {
-			fullscreenControls.style.display = 'flex';
-			fullscreenCounter.textContent = `${fullscreenImageIndex + 1} / ${images.length}`;
-		} else {
-			fullscreenControls.style.display = 'none';
-		}
-		
-		fullscreenModal.setAttribute('aria-hidden', 'false');
-		document.body.style.overflow = 'hidden';
-	}
-
-	function closeFullscreen() {
-		const fullscreenModal = document.getElementById('fullscreen-modal');
-		fullscreenModal.setAttribute('aria-hidden', 'true');
-		document.body.style.overflow = '';
-		fullscreenProduct = null;
-		fullscreenImageIndex = 0;
-	}
-
-	function showFullscreenImage(index) {
-		if (!fullscreenProduct) return;
-		
-		const images = fullscreenProduct.images || [fullscreenProduct.img];
-		if (index < 0 || index >= images.length) return;
-		
-		fullscreenImageIndex = index;
-		const fullscreenImage = document.getElementById('fullscreen-image');
-		const fullscreenCounter = document.getElementById('fullscreen-counter');
-		
-		fullscreenImage.src = images[index];
-		fullscreenCounter.textContent = `${index + 1} / ${images.length}`;
-	}
-
-	function nextFullscreenImage() {
-		if (!fullscreenProduct) return;
-		const images = fullscreenProduct.images || [fullscreenProduct.img];
-		const nextIndex = (fullscreenImageIndex + 1) % images.length;
-		showFullscreenImage(nextIndex);
-	}
-
-	function prevFullscreenImage() {
-		if (!fullscreenProduct) return;
-		const images = fullscreenProduct.images || [fullscreenProduct.img];
-		const prevIndex = (fullscreenImageIndex - 1 + images.length) % images.length;
-		showFullscreenImage(prevIndex);
-	}
-
-	// Event listeners for fullscreen
-	document.getElementById('expand-image-btn').addEventListener('click', openFullscreen);
-	document.getElementById('fullscreen-close').addEventListener('click', closeFullscreen);
-	document.querySelector('.fullscreen-backdrop').addEventListener('click', closeFullscreen);
-	document.getElementById('fullscreen-next').addEventListener('click', nextFullscreenImage);
-	document.getElementById('fullscreen-prev').addEventListener('click', prevFullscreenImage);
-
-	// Modificar event listeners de teclado para incluir fullscreen
+	// Event listeners de teclado
 	window.addEventListener('keydown', (ev)=>{
-		if(ev.key==='Escape') {
-			if(document.getElementById('fullscreen-modal').getAttribute('aria-hidden') === 'false') {
-				closeFullscreen();
-			} else {
-				closeModal();
-			}
-		}
-		if(ev.key==='ArrowRight') {
-			if(document.getElementById('fullscreen-modal').getAttribute('aria-hidden') === 'false') {
-				nextFullscreenImage();
-			} else {
-				nextImage();
-			}
-		}
-		if(ev.key==='ArrowLeft') {
-			if(document.getElementById('fullscreen-modal').getAttribute('aria-hidden') === 'false') {
-				prevFullscreenImage();
-			} else {
-				prevImage();
-			}
-		}
+		if(ev.key==='Escape') closeModal();
+		if(ev.key==='ArrowRight') nextImage();
+		if(ev.key==='ArrowLeft') prevImage();
 	});
 
 	// Inicial
