@@ -95,8 +95,10 @@
 .bestseller-media img{width:100%;height:100%;object-fit:cover;transition:all .3s ease;filter:contrast(1.05) saturate(1.0)}
 
 /* Animaciones específicas para cada imagen */
+.bestseller-card:nth-child(1) .bestseller-media{height:85%}
 .bestseller-card:nth-child(1) .bestseller-media img{animation:bestsellerPulse1 4s ease-in-out infinite;object-position:center top}
 .bestseller-card:nth-child(2) .bestseller-media img{animation:bestsellerPulse2 4s ease-in-out infinite;object-position:center center;transform:scale(1.1)}
+.bestseller-card:nth-child(3) .bestseller-media{height:85%}
 .bestseller-card:nth-child(3) .bestseller-media img{animation:bestsellerPulse3 4s ease-in-out infinite;object-position:center top}
 
 .bestseller-card:nth-child(1):hover .bestseller-media img{transform:scale(1.05);filter:contrast(1.1) saturate(1.0);animation-play-state:paused}
