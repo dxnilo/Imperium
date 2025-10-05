@@ -59,7 +59,8 @@
 			category: 'camisas de compresion', 
 			images: [
 				'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (4).jpeg',
-				'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (5).jpeg'
+				'camisas de compresion/WhatsApp Image 2025-09-06 at 2.03.39 PM (5).jpeg',
+				'camisas de compresion/WhatsApp Image 2025-09-30 at 11.05.18 AM (1).jpeg'
 			]
 		},
 		
@@ -71,7 +72,8 @@
 			category: 'camisillas', 
 			images: [
 				'camisillas/WhatsApp Image 2025-09-06 at 2.03.39 PM (6).jpeg',
-				'camisillas/WhatsApp Image 2025-09-06 at 2.03.40 PM.jpeg'
+				'camisillas/WhatsApp Image 2025-09-06 at 2.03.40 PM.jpeg',
+				'camisillas/WhatsApp Image 2025-09-30 at 11.05.18 AM (1).jpeg'
 			]
 		},
 		
@@ -100,7 +102,10 @@
 			name: 'Jogger Imperium Black', 
 			price: 70000, 
 			category: 'joggers', 
-			images: ['joggers/jogers a 70.000/jogger imperium black/WhatsApp Image 2025-09-06 at 2.03.39 PM (1).jpeg']
+			images: [
+				'joggers/jogers a 70.000/jogger imperium black/WhatsApp Image 2025-09-06 at 2.03.39 PM (1).jpeg',
+				'joggers/jogers a 70.000/jogger imperium black/WhatsApp Image 2025-09-30 at 11.05.18 AM.jpeg'
+			]
 		},
 		
 		// Joggers de $80.000 - PRODUCTOS INDIVIDUALES
@@ -109,7 +114,10 @@
 			name: 'Jogger Imperium Electric Black', 
 			price: 80000, 
 			category: 'joggers', 
-			images: ['joggers/jogers a 80.000/jogger imperium electric black/WhatsApp Image 2025-09-06 at 2.03.38 PM.jpeg']
+			images: [
+				'joggers/jogers a 80.000/jogger imperium electric black/WhatsApp Image 2025-09-06 at 2.03.38 PM.jpeg',
+				'joggers/jogers a 80.000/jogger imperium electric black/WhatsApp Image 2025-09-30 at 11.05.18 AM.jpeg'
+			]
 		},
 		{ 
 			id: 'jog-80-2', 
@@ -123,7 +131,10 @@
 			name: 'Jogger Imperium Hardstyle Black', 
 			price: 80000, 
 			category: 'joggers', 
-			images: ['joggers/jogers a 80.000/jogger imperium hardstyle black/WhatsApp Image 2025-09-06 at 2.03.38 PM (2).jpeg']
+			images: [
+				'joggers/jogers a 80.000/jogger imperium hardstyle black/WhatsApp Image 2025-09-06 at 2.03.38 PM (2).jpeg',
+				'joggers/jogers a 80.000/jogger imperium hardstyle black/WhatsApp Image 2025-09-30 at 11.05.18 AM.jpeg'
+			]
 		},
 		{ 
 			id: 'jog-80-4', 
@@ -182,7 +193,7 @@
 
 	let currentImageIndex = 0;
 let currentProduct = null;
-	
+
 	function openModal(product){
 		currentProduct = product;
 		currentImageIndex = 0;
@@ -193,7 +204,7 @@ let currentProduct = null;
 		modalCategory.textContent = categories.find(c=>c.key===product.category)?.title ?? '';
 		modalPrice.textContent = toMoney(product.price);
 		const message = encodeURIComponent(`Hola, quiero este producto: ${product.name} (${product.id}) - Precio: ${toMoney(product.price)}`);
-		modalWhatsApp.href = `https://wa.me/573017068585?text=${message}`;
+		modalWhatsApp.href = `https://wa.me/573104119853?text=${message}`;
 		
 		// Mostrar controles de galería solo si hay múltiples imágenes
 		const galleryControls = document.getElementById('modal-gallery-controls');
